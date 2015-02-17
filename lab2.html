@@ -7,18 +7,28 @@
 attribute vec3 vPosition;
 attribute vec3 vColor;
 varying vec4 color;
+uniform float  offset_x;
+uniform float  offset_y;
+
 
 void
 main()
 {
-    gl_Position = vec4(vPosition, 1.0);
+    //gl_Position = vec4(vPosition, 1.0);
     color = vec4(vColor, 1.0);
+	
+	//updates position
+    gl_Position.x =  offset_x + vPosition.x ;
+    gl_Position.y =  offset_y + vPosition.y ;
+    gl_Position.z = 0.0;
+    gl_Position.w = 1.0;
+
+	
 }
 </script>
 
 <script id="fragment-shader" type="x-shader/x-fragment">
 precision mediump float;
-
 varying vec4 color;
 
 void
