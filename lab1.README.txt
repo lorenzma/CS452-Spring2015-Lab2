@@ -1,1 +1,7 @@
-name, date, description
+Marcy Lorenzi, 2/16/2015, This program displays a hexagon, comprised of 6 triangles with 3 different colors. 
+The hexagon starts in the center of the screen and when the user presses certain keys on the keyboard the hexagon moves:
+A - left
+S- Down
+W- Up
+D- Right
+I - Return to origin.
